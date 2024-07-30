@@ -49,6 +49,7 @@ public class UserTests {
 	}
 	
 	
+	@Test(priority=3)
 	public void testUpdateUserByName()
 	{
 		//Update the user data
@@ -63,6 +64,14 @@ public class UserTests {
 		//After Update user data
 		Response responseAfterUpdate=UserEndPoints.readUser(this.userPayload.getUsername());
 		Assert.assertEquals(responseAfterUpdate.getStatusCode(), 200);
+	}
+	
+	@Test(priority=4)
+	public void testDeleteUserByName()
+	{
+		Response response=UserEndPoints.deleteUser(this.userPayload.getUsername());
+		response.then().log().body();
+		Assert.assertEquals(response.getStatusCode(), 200);
 	}
 }
 
