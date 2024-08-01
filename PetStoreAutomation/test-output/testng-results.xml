@@ -1,33 +1,161 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-01T16:29:54 IST" name="Default suite" finished-at="2024-08-01T16:30:04 IST" duration-ms="10381">
+  <suite started-at="2024-08-01T20:13:25 IST" name="Default suite" finished-at="2024-08-01T20:13:26 IST" duration-ms="522">
     <groups>
     </groups>
-    <test started-at="2024-08-01T16:29:54 IST" name="Default test" finished-at="2024-08-01T16:30:04 IST" duration-ms="10381">
-      <class name="api.test.UserTests">
-        <test-method is-config="true" signature="setupData()[pri:0, instance:api.test.UserTests@7ef82753]" started-at="2024-08-01T16:29:54 IST" name="setupData" finished-at="2024-08-01T16:29:54 IST" duration-ms="475" status="PASS">
+    <test started-at="2024-08-01T20:13:25 IST" name="Default test" finished-at="2024-08-01T20:13:26 IST" duration-ms="522">
+      <class name="api.test.DDTests">
+        <test-method signature="testPostuser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.test.DDTests@f09733f]" started-at="2024-08-01T20:13:26 IST" name="testPostuser" data-provider="Data" finished-at="2024-08-01T20:13:26 IST" duration-ms="0" status="FAIL">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[java.lang.NoSuchMethodError: 'java.lang.ClassLoader[] org.apache.logging.log4j.util.LoaderUtil.getClassLoaders()']]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: java.lang.NoSuchMethodError: 'java.lang.ClassLoader[] org.apache.logging.log4j.util.LoaderUtil.getClassLoaders()'
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:58)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:159)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:809)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:734)
+at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
+at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:946)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: java.lang.NoSuchMethodError: 'java.lang.ClassLoader[] org.apache.logging.log4j.util.LoaderUtil.getClassLoaders()'
+at org.apache.logging.log4j.core.impl.ThreadContextDataInjector.getServiceProviders(ThreadContextDataInjector.java:83)
+at org.apache.logging.log4j.core.impl.ThreadContextDataInjector.initServiceProviders(ThreadContextDataInjector.java:73)
+at org.apache.logging.log4j.core.impl.ThreadContextDataInjector.getProviders(ThreadContextDataInjector.java:285)
+at org.apache.logging.log4j.core.impl.ThreadContextDataInjector.access$000(ThreadContextDataInjector.java:55)
+at org.apache.logging.log4j.core.impl.ThreadContextDataInjector$ForCopyOnWriteThreadContextMap.<init>(ThreadContextDataInjector.java:226)
+at org.apache.logging.log4j.core.impl.ContextDataInjectorFactory.createDefaultInjector(ContextDataInjectorFactory.java:94)
+at org.apache.logging.log4j.core.impl.ContextDataInjectorFactory.createInjector(ContextDataInjectorFactory.java:71)
+at org.apache.logging.log4j.core.impl.ReusableLogEventFactory.<init>(ReusableLogEventFactory.java:42)
+at org.apache.logging.log4j.core.config.LoggerConfig.<clinit>(LoggerConfig.java:96)
+at org.apache.logging.log4j.core.config.AbstractConfiguration.<init>(AbstractConfiguration.java:136)
+at org.apache.logging.log4j.core.config.NullConfiguration.<init>(NullConfiguration.java:32)
+at org.apache.logging.log4j.core.LoggerContext.<clinit>(LoggerContext.java:85)
+at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.createContext(ClassLoaderContextSelector.java:254)
+at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.locateContext(ClassLoaderContextSelector.java:218)
+at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.getContext(ClassLoaderContextSelector.java:136)
+at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.getContext(ClassLoaderContextSelector.java:123)
+at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.getContext(ClassLoaderContextSelector.java:117)
+at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:150)
+at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:47)
+at org.apache.logging.log4j.LogManager.getContext(LogManager.java:197)
+at org.apache.logging.log4j.LogManager.getLogger(LogManager.java:611)
+at org.apache.poi.ooxml.POIXMLDocumentPart.<clinit>(POIXMLDocumentPart.java:56)
+at api.utilities.XLUtility.getRowCount(XLUtility.java:32)
+at api.utilities.DataProviders.getAllData(DataProviders.java:16)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:54)
+... 25 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setupData -->
-        <test-method signature="testPostUser()[pri:1, instance:api.test.UserTests@7ef82753]" started-at="2024-08-01T16:29:54 IST" name="testPostUser" finished-at="2024-08-01T16:29:59 IST" duration-ms="5150" status="PASS">
+        </test-method> <!-- testPostuser -->
+        <test-method signature="testDeteleUserByName(java.lang.String)[pri:2, instance:api.test.DDTests@f09733f]" started-at="2024-08-01T20:13:26 IST" name="testDeteleUserByName" data-provider="UserNames" finished-at="2024-08-01T20:13:26 IST" duration-ms="0" status="FAIL">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[java.lang.NoClassDefFoundError: Could not initialize class org.apache.poi.xssf.usermodel.XSSFWorkbook]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: java.lang.NoClassDefFoundError: Could not initialize class org.apache.poi.xssf.usermodel.XSSFWorkbook
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:58)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:159)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:809)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:734)
+at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
+at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:946)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class org.apache.poi.xssf.usermodel.XSSFWorkbook
+at api.utilities.XLUtility.getRowCount(XLUtility.java:32)
+at api.utilities.DataProviders.getUserNames(DataProviders.java:39)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:54)
+... 25 more
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.NoSuchMethodError: 'java.lang.ClassLoader[] org.apache.logging.log4j.util.LoaderUtil.getClassLoaders()' [in thread "main"]
+at org.apache.logging.log4j.core.impl.ThreadContextDataInjector.getServiceProviders(ThreadContextDataInjector.java:83)
+at org.apache.logging.log4j.core.impl.ThreadContextDataInjector.initServiceProviders(ThreadContextDataInjector.java:73)
+at org.apache.logging.log4j.core.impl.ThreadContextDataInjector.getProviders(ThreadContextDataInjector.java:285)
+at org.apache.logging.log4j.core.impl.ThreadContextDataInjector.access$000(ThreadContextDataInjector.java:55)
+at org.apache.logging.log4j.core.impl.ThreadContextDataInjector$ForCopyOnWriteThreadContextMap.<init>(ThreadContextDataInjector.java:226)
+at org.apache.logging.log4j.core.impl.ContextDataInjectorFactory.createDefaultInjector(ContextDataInjectorFactory.java:94)
+at org.apache.logging.log4j.core.impl.ContextDataInjectorFactory.createInjector(ContextDataInjectorFactory.java:71)
+at org.apache.logging.log4j.core.impl.ReusableLogEventFactory.<init>(ReusableLogEventFactory.java:42)
+at org.apache.logging.log4j.core.config.LoggerConfig.<clinit>(LoggerConfig.java:96)
+at org.apache.logging.log4j.core.config.AbstractConfiguration.<init>(AbstractConfiguration.java:136)
+at org.apache.logging.log4j.core.config.NullConfiguration.<init>(NullConfiguration.java:32)
+at org.apache.logging.log4j.core.LoggerContext.<clinit>(LoggerContext.java:85)
+at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.createContext(ClassLoaderContextSelector.java:254)
+at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.locateContext(ClassLoaderContextSelector.java:218)
+at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.getContext(ClassLoaderContextSelector.java:136)
+at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.getContext(ClassLoaderContextSelector.java:123)
+at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.getContext(ClassLoaderContextSelector.java:117)
+at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:150)
+at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:47)
+at org.apache.logging.log4j.LogManager.getContext(LogManager.java:197)
+at org.apache.logging.log4j.LogManager.getLogger(LogManager.java:611)
+at org.apache.poi.ooxml.POIXMLDocumentPart.<clinit>(POIXMLDocumentPart.java:56)
+at api.utilities.XLUtility.getRowCount(XLUtility.java:32)
+at api.utilities.DataProviders.getAllData(DataProviders.java:16)
+... 32 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testPostUser -->
-        <test-method signature="testGetUserByName()[pri:2, instance:api.test.UserTests@7ef82753]" started-at="2024-08-01T16:29:59 IST" name="testGetUserByName" finished-at="2024-08-01T16:30:01 IST" duration-ms="1207" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testGetUserByName -->
-        <test-method signature="testUpdateUserByName()[pri:3, instance:api.test.UserTests@7ef82753]" started-at="2024-08-01T16:30:01 IST" name="testUpdateUserByName" finished-at="2024-08-01T16:30:03 IST" duration-ms="2327" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUpdateUserByName -->
-        <test-method signature="testDeleteUserByName()[pri:4, instance:api.test.UserTests@7ef82753]" started-at="2024-08-01T16:30:03 IST" name="testDeleteUserByName" finished-at="2024-08-01T16:30:04 IST" duration-ms="1086" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testDeleteUserByName -->
-      </class> <!-- api.test.UserTests -->
+        </test-method> <!-- testDeteleUserByName -->
+      </class> <!-- api.test.DDTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
