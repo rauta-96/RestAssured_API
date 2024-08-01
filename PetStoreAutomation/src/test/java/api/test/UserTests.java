@@ -73,7 +73,10 @@ public class UserTests {
 		response.then().log().body();
 		Assert.assertEquals(response.getStatusCode(), 200);
 	}
+	
+
 }
+
 
 
 
