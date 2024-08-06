@@ -11,7 +11,7 @@ import io.restassured.response.Response;
 public class DDTests {
 
 	@Test(priority=1, dataProvider="Data", dataProviderClass=DataProviders.class )
-	public void testPostuser(String userid, String userName, String fname, String lname, String email, String pwd, String ph)
+	public void testPostUser(String userid, String userName, String fname, String lname, String email, String pwd, String ph)
 	{
 		User userPayload = new User();
 		

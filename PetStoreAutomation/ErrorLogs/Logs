@@ -1,0 +1,14 @@
+23:27:06.236 [main] INFO  - **********Creating the User****************
+23:27:11.371 [main] INFO  - ********** User is Created ***************
+23:27:11.383 [main] INFO  - **********get the User****************
+23:27:12.549 [main] INFO  - **********Updating the User****************
+23:27:14.766 [main] INFO  - **********User is Updated****************
+23:27:14.782 [main] INFO  - **********delete the user****************
+23:27:15.888 [main] INFO  - ********* User Deleted****************
+23:28:42.449 [main] INFO  - **********Creating the User****************
+23:28:46.838 [main] INFO  - ********** User is Created ***************
+23:28:46.848 [main] INFO  - **********get the User****************
+23:28:48.038 [main] INFO  - **********Updating the User****************
+23:28:50.240 [main] INFO  - **********User is Updated****************
+23:28:50.255 [main] INFO  - **********delete the user****************
+23:28:51.373 [main] INFO  - ********* User Deleted****************

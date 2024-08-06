@@ -9,6 +9,12 @@
           <include name="testPostuser"/>
         </methods>
       </class> <!-- api.test.DDTests -->
+      <class name="api.test.UserTests">
+        <methods>
+          <include name="setupData"/>
+          <include name="testUpdateUserByName"/>
+        </methods>
+      </class> <!-- api.test.UserTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
